@@ -1,7 +1,13 @@
+import ResultsContainer from "./ResultsContainer"
+import SearchContainer from "./SearchContainer"
 
 function FindConcerts() {
     return (
-        <h1>Find Concerts component goes here</h1>
+        <div className="find-concerts-container">
+            <h1>Find Concerts component goes here</h1>
+            <SearchContainer />
+            <ResultsContainer />
+        </div>
     )
 }
 

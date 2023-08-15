@@ -1,11 +1,28 @@
+import { useState } from "react"
 import SearchBar from "./SearchBar"
 
-function SearchContainer(){
+function SearchContainer({handleSubmit}){
+    
+    
+
+    
+
     return (
         <div>
-            <SearchBar searchType={"Band"}/>
-            <SearchBar searchType={"Venue"}/>
-            <SearchBar searchType={"City"}/>
+            <SearchBar 
+                searchType={"band"}
+                handleSubmit={handleSubmit} 
+                 
+                />
+            <SearchBar 
+                searchType={"venue"} 
+                handleSubmit={handleSubmit} 
+                 
+                />
+            <SearchBar 
+                searchType={"city"} 
+                handleSubmit={handleSubmit} 
+                />
         </div>
     )
 }

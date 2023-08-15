@@ -67,7 +67,8 @@ function App() {
         })
         break
       case "city":
-        fetchURL=""
+        fetchURL = `${API_URL}/events?venue.city=${query}`
+        doFetch(fetchURL)
         break
     }
     

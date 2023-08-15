@@ -37,26 +37,41 @@ function App() {
       "Authorization": `Basic ${auth}`,
       }
 
+    function doFetch(fetchURL){
+      fetch(fetchURL, {
+        method: "GET",
+        headers: headers,
+        redirect: "follow"
+      })
+        .then(r=>r.json())
+        .then(data=>setSearchResults(data["events"]))
+        .catch(error => console.log('error', error));
+    }
+    
     switch (type) {
       case "band" : 
         fetchURL = `${API_URL}/events?performers.slug=${cleanUpBandName(query)}`
+        doFetch(fetchURL)
         break
       case "venue":
-        fetchURL=""
+        fetch(`${API_URL}/venues?name=${query}`, {
+          method: "GET",
+          headers: headers,
+          redirect: "follow"
+        })
+        .then(r=>r.json())
+        .then(data => {
+          const venueId = data.venues[0].id
+          fetchURL=`${API_URL}/events?venue.id=${venueId}`
+          doFetch(fetchURL)
+        })
         break
       case "city":
         fetchURL=""
         break
     }
     
-    fetch(fetchURL, {
-      method: "GET",
-      headers: headers,
-      redirect: "follow"
-  })
-      .then(r=>r.json())
-      .then(data=>setSearchResults(data["events"]))
-      .catch(error => console.log('error', error));
+    
 
 
   }

@@ -5,6 +5,7 @@ import NavBar from './Components/NavBar';
 import FindConcerts from './Components/FindConcerts';
 import MyConcerts from './Components/MyConcerts';
 import { useState, useEffect } from 'react';
+import HomePage from './Components/HomePage';
 
 const API_URL = "https://api.seatgeek.com/2"
 const auth = process.env.REACT_APP_ENCODED_AUTH
@@ -29,6 +30,9 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route exact path="/find-concerts">
           <FindConcerts 
             searchResults={searchResults}
             handleSearchSubmit={handleSearchSubmit}

@@ -1,11 +1,11 @@
 import SearchBar from "./SearchBar"
 
-function SearchContainer(){
+function SearchContainer() {
     return (
         <div>
-            <SearchBar searchType={"Band"}/>
-            <SearchBar searchType={"Venue"}/>
-            <SearchBar searchType={"City"}/>
+            <SearchBar searchType={"Band"} />
+            <SearchBar searchType={"Venue"} />
+            <SearchBar searchType={"City"} />
         </div>
     )
 }

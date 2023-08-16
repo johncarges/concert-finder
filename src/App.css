@@ -15,10 +15,11 @@
   display: flex;
   justify-content: flex-start;
   height: 5rem;
-  max-width: 500px
+  max-width: 600px
 }
 
 .nav-link {
+  display: flex;
   font: 2em sans-serif;
   color:#000;
   text-decoration: none;
@@ -27,11 +28,37 @@
   margin: 0.5rem;
 }
 
+
 .nav-link.active,
 .nav-link:focus,
 .nav-link:hover {
   background-color: #eeb224;
   text-decoration: none;
+}
+
+#home-nav-link {
+  padding:0rem
+}
+
+.home-icon {
+  height: 3rem;
+  align-self: center;
+  margin:.5rem
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-page-link {
+  text-decoration: none;
+  font-style: italic;
+  color:#000;
+  padding: 1rem;
+  border: #aaa solid 1px;
+  border-radius: 4%
 }
 
 .find-concerts-container {
@@ -42,13 +69,11 @@
 
 .search-container {
   justify-content: left;
-  
   min-width: 220px
 }
 
 .results-container {
   justify-content: left;
-  
   margin-left: 1rem;
 }
 

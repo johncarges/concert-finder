@@ -35,31 +35,33 @@ function MyConcerts({myConcerts, handleUpdateMyConcerts}) {
 
 
     const renderMyConcerts = myConcerts.map((concert) => (
-        <ul key={concert.id}>
-            <li>
-                <p>{concert.name} on {concert.date}</p>
-                <button onClick={() => toggleDropdown(concert.id)}>
-                    Details⏬
-                </button>
-                <button onClick={() => deleteFavorite(concert.id)}>
-                    Remove🗑
-                </button>
-                {openDropdownId === concert.id && (
-                    <div>
-                        <p>Venue: {concert.venue}</p>
-                        <p>Location: {concert.location}</p>
-                        <p>Date: {concert.date}</p>
-                    </div>
-                )}
-            </li>
-        </ul>
+
+        <li key={concert.id}>
+            <p>{concert.name} on {concert.date}</p>
+            <button onClick={() => toggleDropdown(concert.id)}>
+                Details⏬
+            </button>
+            <button onClick={() => deleteFavorite(concert.id)}>
+                Remove🗑
+            </button>
+            {openDropdownId === concert.id && (
+                <div>
+                    <p>Venue: {concert.venue}</p>
+                    <p>Location: {concert.location}</p>
+                    <p>Date: {concert.date}</p>
+                </div>
+            )}
+        </li>
+
     ))
 
 
 
     return (
         <div>
-            {renderMyConcerts}
+            <ul>
+                {renderMyConcerts}
+            </ul>
         </div>
     )
 }

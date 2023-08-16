@@ -2,19 +2,11 @@
 
 import { useEffect, useState } from "react"
 
+const savedConcerts = "http://localhost:4000/concert"
 
-function MyConcerts() {
-    const savedConcerts = "http://localhost:3000/concert"
-    const [myConcerts, setMyConcerts] = useState([])
+function MyConcerts({myConcerts, handleUpdateMyConcerts}) {
     const [openDropdownId, setOpenDropdownId] = useState(null)
-
-
-    useEffect(() => {
-        fetch(savedConcerts)
-            .then((response) => response.json())
-            .then((data) => setMyConcerts(data))
-    }, [])
-
+    
 
 
     const deleteFavorite = (concertId) => {
@@ -23,7 +15,7 @@ function MyConcerts() {
         })
             .then((response) => response.json())
             .then(() => {
-                setMyConcerts((prevConcerts) =>
+                handleUpdateMyConcerts((prevConcerts) =>
                     prevConcerts.filter((concert) => concert.id !== concertId)
                 )
                 setOpenDropdownId(null)

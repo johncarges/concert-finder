@@ -4,14 +4,25 @@ import './App.css';
 import NavBar from './Components/NavBar';
 import FindConcerts from './Components/FindConcerts';
 import MyConcerts from './Components/MyConcerts';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const API_URL = "https://api.seatgeek.com/2"
 const auth = process.env.REACT_APP_ENCODED_AUTH
+const savedConcerts = "http://localhost:4000/concert"
 
 function App() {
 
   const [searchResults,setSearchResults] = useState([])
+  const [myConcerts, setMyConcerts] = useState([])
+
+
+  useEffect(() => {
+      fetch(savedConcerts)
+          .then((response) => response.json())
+          .then((data) => setMyConcerts(data))
+  }, [])
+
+  const handleUpdateMyConcerts = newConcerts => setMyConcerts(newConcerts)
 
   return (
     <div className="App">
@@ -20,10 +31,14 @@ function App() {
         <Route exact path="/">
           <FindConcerts 
             searchResults={searchResults}
-            handleSearchSubmit={handleSearchSubmit}/>
+            handleSearchSubmit={handleSearchSubmit}
+            myConcerts={myConcerts}
+            handleUpdateMyConcerts={handleUpdateMyConcerts}/>
         </Route>
         <Route exact path="/my-concerts">
-          <MyConcerts />
+          <MyConcerts 
+            myConcerts={myConcerts}
+            handleUpdateMyConcerts={handleUpdateMyConcerts}/>
         </Route>
       </Switch>
     </div>
@@ -77,9 +92,10 @@ function App() {
 
   }
 
-function cleanUpBandName(bandName) {
-  return bandName.toLowerCase().replaceAll(" ", "-")
-}
+  // Helpers
+  function cleanUpBandName(bandName) {
+    return bandName.toLowerCase().replaceAll(" ", "-")
+  }
 
 }
 

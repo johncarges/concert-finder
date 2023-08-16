@@ -3,7 +3,6 @@
     {
       "id": 1,
       "name": "Travis Scott",
-      "image": "",
       "venue": "Square Garden",
       "location": "New York",
       "date": "October 25"
@@ -11,10 +10,9 @@
     {
       "id": 2,
       "name": "Drake",
-      "image": "",
-      "venue": "SCLipper",
-      "location": "LA",
-      "date": "October 27"
+      "venue": "Chase Arena",
+      "location": "Los Angeles",
+      "date": "October 23"
     }
   ]
 }

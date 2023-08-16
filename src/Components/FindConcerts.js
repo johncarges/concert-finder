@@ -3,17 +3,17 @@ import SearchContainer from "./SearchContainer"
 
 
 function FindConcerts(props) {
-    const {searchResults, handleSearchSubmit, myConcerts, handleUpdateMyConcerts} = props
+    const {searchResults, handleSearchSubmit, myConcerts, handleUpdateMyConcerts, searchAttempted} = props
     
 
     return (
         <div className="find-concerts-container">
-            <h1>Find Concerts component goes here</h1>
             <SearchContainer handleSubmit={handleSearchSubmit}/>
             <ResultsContainer 
                 searchResults={searchResults}
                 myConcerts={myConcerts}
-                handleUpdateMyConcerts={handleUpdateMyConcerts}/>
+                handleUpdateMyConcerts={handleUpdateMyConcerts}
+                searchAttempted={searchAttempted}/>
         </div>
     )
 }

@@ -5,7 +5,7 @@ import SearchBar from "./SearchBar"
 function SearchContainer({handleSubmit}){
     
     return (
-        <div>
+        <div className="search-container">
             <SearchBar 
                 searchType={"band"}
                 handleSubmit={handleSubmit} 

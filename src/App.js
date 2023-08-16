@@ -14,7 +14,7 @@ function App() {
 
   const [searchResults,setSearchResults] = useState([])
   const [myConcerts, setMyConcerts] = useState([])
-
+  const [searchAttempted, setSearchAttempted] = useState(false)
 
   useEffect(() => {
       fetch(savedConcerts)
@@ -33,7 +33,8 @@ function App() {
             searchResults={searchResults}
             handleSearchSubmit={handleSearchSubmit}
             myConcerts={myConcerts}
-            handleUpdateMyConcerts={handleUpdateMyConcerts}/>
+            handleUpdateMyConcerts={handleUpdateMyConcerts}
+            searchAttempted={searchAttempted}/>
         </Route>
         <Route exact path="/my-concerts">
           <MyConcerts 
@@ -45,7 +46,8 @@ function App() {
   );
 
   function handleSearchSubmit(searchQuery){
-    
+    setSearchAttempted(true)
+
     const { type, query } = searchQuery
     let fetchURL; 
     const headers = {

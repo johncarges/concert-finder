@@ -51,9 +51,9 @@ function SearchResultItem(props) {
     const { datetime_local, title, venue } = searchResultDetails
     const buttonText = isFavorited ? "Remove From Favorites" :"Save to Favorites"
     return (
-        <li>
-            <p>{`${restructureDate(datetime_local)}: ${title} at ${venue["name_v2"]}`}</p>
-            <button onClick={handleClickFavorites}>{buttonText}</button>
+        <li className="result">
+            <p className="concert-detail">{`${restructureDate(datetime_local)}: ${title} at ${venue["name_v2"]}`}</p>
+            <button className="favorite-button" onClick={handleClickFavorites}>{buttonText}</button>
         </li>
     )
 

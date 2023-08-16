@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+:root {
+  --main-bg-color: #f0f0f0
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* * {
+  border:#aaa solid 1px
+} */
+
+.nav-bar-container {
+  display: flex;
+  background-color: #b35d5d;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-bar {
+  display: flex;
+  justify-content: flex-start;
+  height: 5rem;
+  max-width: 500px
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-link {
+  font: 2em sans-serif;
+  color:#000;
+  text-decoration: none;
+  padding: 1rem;
+  font-weight: 200;
+  margin: 0.5rem;
+}
+
+.nav-link.active,
+.nav-link:focus,
+.nav-link:hover {
+  background-color: #eeb224;
+  text-decoration: none;
+}
+
+.find-concerts-container {
+  padding: 2rem;
+  display:flex;
+  justify-content: center;
+}
+
+.search-container {
+  justify-content: left;
+  
+  min-width: 220px
+}
+
+.results-container {
+  justify-content: left;
+  
+  margin-left: 1rem;
+}
+
+.results-list {
+  list-style: none;
+}
+
+.results-header {
+  margin-left: 2.5rem;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  border:#aaa solid 1px;
+  border-radius: 1%;
+  margin: .25rem;
+  height: 6rem;
+}
+
+.concert-detail {
+  margin-left: 2rem;
+  max-width: 70%;
+}
+
+.favorite-button {
+  height: 50%;
+  align-self: flex-end;
+  justify-self: flex-end;
+  width: 90px;
+  font-size: .75rem;
+  margin: .25rem
+}
+
+/* Catch no results*/
+.before-search {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.before-search-image {
+  border:#eeb224 solid 3px;
+  border-radius: 50%;
+  width: 50%;
+  aspect-ratio: 1;
+  opacity: 50%;
+}
+
+.no-results {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

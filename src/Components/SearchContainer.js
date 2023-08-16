@@ -1,12 +1,9 @@
 import { useState } from "react"
 import SearchBar from "./SearchBar"
 
+
 function SearchContainer({handleSubmit}){
     
-    
-
-    
-
     return (
         <div>
             <SearchBar 
@@ -23,6 +20,7 @@ function SearchContainer({handleSubmit}){
                 searchType={"city"} 
                 handleSubmit={handleSubmit} 
                 />
+
         </div>
     )
 }

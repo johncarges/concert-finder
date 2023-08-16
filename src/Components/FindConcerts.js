@@ -3,6 +3,7 @@ import ResultsContainer from "./ResultsContainer"
 import SearchContainer from "./SearchContainer"
 
 
+
 const API_URL = "https://api.seatgeek.com/2"
 const auth = process.env.REACT_APP_ENCODED_AUTH
 
@@ -27,6 +28,7 @@ function FindConcerts({searchResults, handleSearchSubmit}) {
         
     // },[])
     
+
     return (
         <div className="find-concerts-container">
             <h1>Find Concerts component goes here</h1>

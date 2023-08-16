@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Concert Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+by John Carges and Nial Johnson
 
-## Available Scripts
+### Objective
 
-In the project directory, you can run:
+With this app we are creating, we are making a space where you will be able to find concerts or events that you are interested in using the SeatGeek API. You will also be able to add events that you are interested in to a favorites section, where you can access them easier for later. We also would like to incule a feature that give us the range to search from location, day, artist ect.
 
-### `npm start`
+# Deliverables
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### 1. Connecting APIs
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+We want to first display the infomation that we get from the SeatGeek API. Once that is loaded, we also need to connect another API so that there is a place for our favorited events.
 
-### `npm test`
+### 2. Creating a favorites Page
+Within our page, we want to have a main page where we have the listings of concerts. From that page we want to redirect to another where it has our favorites listed
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Click Actions
+We should be able to click on events that we want to favorite and have them appeat in our favorites section. Within our favorites section, We would also have the ability to remove them as well.
 
-### `npm run build`
+### 4. Filtered Search
+When looking for events we want to be able to search for events based on location, artist/band, venue, ect.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Extra Deliverables
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ 1. Integrate Setlist.fm API: if a band is touring and has recent shows documented on setlist.fm, create list of frequently played songs.
 
-### `npm run eject`
+ 2. Provide external links to ticket sales
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Share favorites: send your concert wishlist to your friends, and find concerts you want to see together!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

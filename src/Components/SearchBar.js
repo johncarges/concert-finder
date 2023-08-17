@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { capitalize } from "../helpers"
 
 
 function SearchBar({searchType, handleSubmit, handleChange}) {
@@ -20,14 +21,14 @@ function SearchBar({searchType, handleSubmit, handleChange}) {
     
     return (
         <div>
-            <h1>{`By ${searchType}`}</h1>
+            <h1>{`By ${capitalize(searchType)}`}</h1>
             <form onSubmit={handleClick}>
                 <input 
                     value={value}
                     onChange={handleChange} 
                     type="text" 
                     name={searchType} 
-                    placeholder={searchType} />
+                    placeholder={capitalize(searchType)} />
                 <button type="submit">Search</button>
             </form>
         </div>

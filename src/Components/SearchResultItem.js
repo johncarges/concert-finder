@@ -1,3 +1,4 @@
+import { restructureDate } from "../helpers"
 
 function SearchResultItem(props) {
     const {searchResultDetails, myConcerts, handleUpdateMyConcerts} = props
@@ -44,10 +45,7 @@ function SearchResultItem(props) {
         isFavorited ? removeFromFavorites() : addToFavorites()
     }
 
-    function restructureDate(date) {
-        const [y,m,d] = date.slice(0,10).split("-")
-        return `${m}/${d}/${y}`
-    }
+    
     const { datetime_local, title, venue } = searchResultDetails
     const buttonText = isFavorited ? "Remove From Favorites" :"Save to Favorites"
     return (

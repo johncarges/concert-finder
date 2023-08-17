@@ -1,13 +1,9 @@
+import { useState } from "react"
+import { restructureDate, db_URL as savedConcerts } from "../helpers"
 
-
-import { useEffect, useState } from "react"
-
-const savedConcerts = "http://localhost:4000/concert"
 
 function MyConcerts({myConcerts, handleUpdateMyConcerts}) {
     const [openDropdownId, setOpenDropdownId] = useState(null)
-    
-
 
     const deleteFavorite = (concertId) => {
         fetch(savedConcerts + `/${concertId}`, {
@@ -22,8 +18,6 @@ function MyConcerts({myConcerts, handleUpdateMyConcerts}) {
             })
     }
 
-
-
     const toggleDropdown = (concertId) => {
         if (openDropdownId === concertId) {
             setOpenDropdownId(null)
@@ -32,12 +26,10 @@ function MyConcerts({myConcerts, handleUpdateMyConcerts}) {
         }
     }
 
-
-
     const renderMyConcerts = myConcerts.map((concert) => (
 
         <li key={concert.id}>
-            <p>{concert.name} on {concert.date}</p>
+            <p>{concert.name} on {restructureDate(concert.date)}</p>
             <button onClick={() => toggleDropdown(concert.id)}>
                 Details⏬
             </button>

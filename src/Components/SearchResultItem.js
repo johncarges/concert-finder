@@ -50,7 +50,17 @@ function SearchResultItem(props) {
     const buttonText = isFavorited ? "Remove From Favorites" :"Save to Favorites"
     return (
         <li className="result">
-            <p className="concert-detail">{`${restructureDate(datetime_local)}: ${title} at ${venue["name_v2"]}`}</p>
+            {/* <p className="concert-detail">
+                {`${restructureDate(datetime_local)}: ${title} at ${venue["name_v2"]}`}
+            </p> */}
+            <div className="results-date">
+                <p>{restructureDate(datetime_local)}</p>
+            </div>
+            <div className="results-description">
+                <p className="results-description-title">{title}</p>
+                <p className="results-description-venue">{venue["name_v2"]}</p>
+            </div>
+
             <button className="favorite-button" onClick={handleClickFavorites}>{buttonText}</button>
         </li>
     )

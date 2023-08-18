@@ -64,6 +64,18 @@
   align-items: center;
 }
 
+.home-page-header {
+  font-style: italic;
+  font-weight:400;
+}
+
+.home-page-body {
+  max-width: 50%;
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.8rem;
+}
+
 .home-page-link {
   text-decoration: none;
   font-style: italic;
@@ -84,13 +96,14 @@
 .search-container {
   justify-content: left;
   min-width: 220px;
-  flex-grow: 1;
   padding: 1rem
 }
 
 .results-container {
   justify-content: left;
   margin-left: 1rem;
+  margin-right: 1rem;
+  flex-grow: 1;
 }
 
 .results-list {
@@ -103,6 +116,7 @@
 
 .result {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   border:#aaa solid 1px;
   border-radius: 1%;
@@ -114,6 +128,22 @@
 .concert-detail {
   margin-left: 2rem;
   max-width: 70%;
+}
+
+.results-date {
+  margin-left: 2rem;
+}
+
+.results-description {
+  width: 50%;
+  justify-content: left;
+}
+.results-description-title {
+  font-weight: 600;
+}
+.results-description-venue {
+  font-weight: 200;
+  color:#333
 }
 
 .favorite-button {
@@ -130,6 +160,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1;
 }
 
 .before-search-image {
@@ -140,8 +171,16 @@
   opacity: 50%;
 }
 
-.no-results {
+.no-results,
+.still-loading {
+  margin-top: 8rem;
   display: flex;
   justify-content: center;
-  flex-grow: 2;
+  flex-grow: 1;
 }
+
+/* .still-loading {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+} */

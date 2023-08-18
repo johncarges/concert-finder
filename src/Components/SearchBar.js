@@ -2,21 +2,26 @@ import { useState } from "react"
 import { capitalize } from "../helpers"
 
 
-function SearchBar({searchType, handleSubmit, handleChange}) {
+function SearchBar({searchType, handleSubmit, handleChange, formData, setFormData}) {
     
     function handleChange(event) {
         setFormData({
             ...formData,
-            query: event.target.value
+            [searchType]: event.target.value
         })
     }
 
-    const [formData, setFormData] = useState({type: searchType, query: ""})
-    const value = formData.query
+    //const [formData, setFormData] = useState({type: searchType, query: ""})
+    const value = formData[searchType]
     
     function handleClick(event) {
         event.preventDefault()
-        handleSubmit(formData)
+        handleSubmit({type: searchType, query: value})
+        setFormData({
+            band: "",
+            venue: "",
+            city: ""
+        })
     }
     
     return (

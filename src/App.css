@@ -89,7 +89,7 @@
   padding: 2rem;
   align-self: center;
   display:flex;
-  width: 100%;
+  width: 90%;
   max-width: 1400px;
 }
 
@@ -118,11 +118,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border:#aaa solid 1px;
+  border: solid 1px transparent;
   border-radius: 1%;
   margin: .25rem;
   height: 6rem;
   flex-grow: 2;
+}
+
+.result:hover {
+  border: #aaa solid 1px ;
+  border-radius: 1%;
 }
 
 .concert-detail {

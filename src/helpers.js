@@ -13,10 +13,14 @@ function capitalize(str) {
     return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 }
 
+function cleanUpBandName(bandName) {
+    return bandName.toLowerCase().replaceAll(" ", "-")
+}
+
 
 // URLS
 const API_URL = "https://api.seatgeek.com/2"
 const db_URL = "http://localhost:4000/concert"
 const auth = process.env.REACT_APP_ENCODED_AUTH
 
-export {restructureDate , capitalize, API_URL, db_URL, auth}
+export {restructureDate , capitalize, API_URL, db_URL, auth, cleanUpBandName}

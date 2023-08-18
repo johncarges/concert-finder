@@ -5,7 +5,7 @@ import NavBar from './Components/NavBar';
 import FindConcerts from './Components/FindConcerts';
 import MyConcerts from './Components/MyConcerts';
 import HomePage from './Components/HomePage';
-import { API_URL, db_URL as savedConcerts, auth } from "./helpers"
+import { API_URL, db_URL as savedConcerts, auth, cleanUpBandName } from "./helpers"
 
 
 function App() {
@@ -48,7 +48,7 @@ function App() {
 
   function handleSearchSubmit(searchQuery){
     setSearchAttempted(true)
-
+    
     const { type, query } = searchQuery
     let fetchURL; 
     const headers = {
@@ -95,10 +95,7 @@ function App() {
 
   }
 
-  // Helpers
-  function cleanUpBandName(bandName) {
-    return bandName.toLowerCase().replaceAll(" ", "-")
-  }
+
 
 }
 

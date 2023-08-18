@@ -1,15 +1,12 @@
-import logo from './logo.svg';
 import { Route, Switch } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import './App.css';
 import NavBar from './Components/NavBar';
 import FindConcerts from './Components/FindConcerts';
 import MyConcerts from './Components/MyConcerts';
-import { useState, useEffect } from 'react';
 import HomePage from './Components/HomePage';
+import { API_URL, db_URL as savedConcerts, auth } from "./helpers"
 
-const API_URL = "https://api.seatgeek.com/2"
-const auth = process.env.REACT_APP_ENCODED_AUTH
-const savedConcerts = "http://localhost:4000/concert"
 
 function App() {
 

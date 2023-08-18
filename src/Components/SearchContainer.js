@@ -1,6 +1,4 @@
-import { useState } from "react"
 import SearchBar from "./SearchBar"
-
 
 function SearchContainer({handleSubmit}){
     
@@ -25,4 +23,4 @@ function SearchContainer({handleSubmit}){
     )
 }
 
-export default SearchContainer
+export default SearchContainer 

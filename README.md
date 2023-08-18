@@ -8,7 +8,7 @@ With this app we are creating, we are making a space where you will be able to f
 
 # Deliverables
 
-#### 1. Connecting APIs
+### 1. Connecting APIs
 
 We want to first display the infomation that we get from the SeatGeek API. Once that is loaded, we also need to connect another API so that there is a place for our favorited events.
 
